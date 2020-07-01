@@ -11,7 +11,7 @@ app.use(express.static("trend"));
 
 app.get('/priyam', (req,res)=>{
 
-    fileSystem.readdir('trend',(err,files)=>{
+    fileSystem.readdir('/home/mayank/priyam/trend',(err,files)=>{
         if(err)  res.status(500).json({message:"Something went wrong"});
          let tiktokFiles = [];
          files.map((fileName,index)=>{
