@@ -9,7 +9,7 @@ const app = express()
 const port = 8089
 app.use(express.static("trend"));
 
-app.get('/', (req,res)=>{
+app.get('/priyam', (req,res)=>{
 
     fileSystem.readdir('trend',(err,files)=>{
         if(err)  res.status(500).json({message:"Something went wrong"});
